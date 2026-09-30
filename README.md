@@ -75,3 +75,7 @@ visible. Bespoke Labs also publishes an official `typesafe-sdk` package on PyPI.
   body is limited to 64 KiB).
 - `confidence` shows how concentrated the probabilities are. It doesn't measure whether the
   answer is correct.
+
+## License
+
+[MIT](LICENSE)
