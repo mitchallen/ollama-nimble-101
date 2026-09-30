@@ -79,6 +79,10 @@ visible. Bespoke Labs also publishes an official `typesafe-sdk` package on PyPI.
 - `confidence` shows how concentrated the probabilities are. It doesn't measure whether the
   answer is correct.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 [MIT](LICENSE)
