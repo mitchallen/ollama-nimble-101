@@ -1,5 +1,7 @@
 # ollama-nimble-101
 
+[![CI](https://github.com/mitchallen/ollama-nimble-101/actions/workflows/ci.yml/badge.svg)](https://github.com/mitchallen/ollama-nimble-101/actions/workflows/ci.yml)
+
 Python examples for [Nimble](https://ollama.com/library/nimble), a 9B **decision model** from
 Bespoke Labs (fine-tuned from Qwen3.5-9B) served by Ollama. It uses [uv](https://docs.astral.sh/uv/)
 and `make`.
@@ -35,7 +37,8 @@ make examples    run all examples
 make curl        call the raw endpoint with curl
 make test        unit tests (mocked, no Ollama needed)
 make test-live   integration test against the local model
-make lint        ruff check          make format   ruff format
+make lint        ruff check
+make format      ruff format        (make format-check only checks)
 make clean       remove .venv and caches
 ```
 

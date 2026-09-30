@@ -4,7 +4,7 @@ export OLLAMA_HOST
 export NIMBLE_MODEL := $(MODEL)
 
 .DEFAULT_GOAL := help
-.PHONY: help setup pull check run routing moderation sentiment examples curl test test-live lint format clean
+.PHONY: help setup pull check run routing moderation sentiment examples curl test test-live lint format format-check clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -49,6 +49,9 @@ test-live: setup check ## Run integration tests against the local model
 
 lint: setup ## Lint with ruff
 	uv run ruff check .
+
+format-check: setup ## Check formatting without changing files
+	uv run ruff format --check .
 
 format: setup ## Format with ruff
 	uv run ruff format .
