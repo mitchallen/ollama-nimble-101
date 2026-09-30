@@ -1,0 +1,25 @@
+name: Feature or example request
+description: Suggest a new example, a client improvement or a docs change
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - New example
+        - Client improvement
+        - Docs
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Description
+      description: >
+        What would you like added, and why? For a new example, describe the classification task
+        and the questions you'd ask (choice / noul / score). Nimble only returns typed decisions,
+        not free text.
+    validations:
+      required: true
