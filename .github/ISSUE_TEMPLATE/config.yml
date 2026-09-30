@@ -1,5 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Nimble model or Ollama issues
-    url: https://github.com/ollama/ollama/issues
-    about: Problems with the model itself or the Ollama server belong upstream.

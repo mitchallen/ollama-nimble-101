@@ -45,8 +45,8 @@ Always go through `make` (run `make help` for the list). Most targets depend on 
 
 - `OLLAMA_HOST` (default `http://localhost:11434`) and `NIMBLE_MODEL` (default `nimble`) are
   read by the client. The Makefile's `MODEL` variable is exported as `NIMBLE_MODEL`.
-- Python 3.11 or later is required (`typing.Self`). `.python-version` pins 3.12 locally, and CI
-  tests 3.11, 3.12 and 3.13.
+- Python 3.11 or later is required (`typing.Self`). `.python-version` pins 3.12, which CI
+  also uses.
 
 ## CI / repo
 
@@ -54,7 +54,8 @@ Always go through `make` (run `make help` for the list). Most targets depend on 
   the integration tests, because the model is 9.5 GB.
 - `astral-sh/setup-uv` publishes no floating major tag, so pin its full version (e.g.
   `@v10.2.0`). `@v10` fails to resolve.
-- Dependabot opens weekly grouped PRs for uv and GitHub Actions. Security alerts and automatic
-  security fixes are enabled.
+- Dependabot security alerts are enabled (no version-update config).
+- This is a simple demo: keep repo scaffolding minimal (no contributing guide, templates or
+  code of conduct).
 - The repo is public (github.com/mitchallen/ollama-nimble-101) and MIT licensed. Never commit
   `.venv/`, tokens or `.npmrc`.
