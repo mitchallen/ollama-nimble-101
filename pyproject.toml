@@ -24,3 +24,6 @@ line-length = 100
 testpaths = ["tests"]
 markers = ["integration: needs a running Ollama server with nimble pulled"]
 addopts = "-m 'not integration'"
+
+[tool.uv]
+exclude-newer = "3 days"  # release-age gate: skip versions younger than 3 days
